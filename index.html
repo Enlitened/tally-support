@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tally — Support</title>
+<meta name="description" content="Help with Tally: connecting App Store Connect, report timing, currencies, analytics and subscriptions.">
+<link rel="icon" href="icon-256.png">
+<style>
+  :root {
+    --ground: #f4f6f9; --surface: #ffffff; --ink: #141a22;
+    --muted: #5b6573; --line: #dde3ea; --accent: #0072b2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0d1117; --surface: #151b23; --ink: #eef2f6;
+      --muted: #9aa5b3; --line: #252d38; --accent: #56b4e9;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font: 16px/1.65 ui-sans-serif, -apple-system, system-ui, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 72px 24px 96px; }
+  h1 { font-size: 2.2rem; letter-spacing: -.02em; margin: 0 0 6px; }
+  h2 { font-size: 1.15rem; margin: 40px 0 8px; }
+  p { margin: 0 0 14px; }
+  p.lede { color: var(--muted); font-size: 1.05rem; margin-bottom: 20px; }
+  a { color: var(--accent); }
+  ol, ul { margin: 0 0 14px; padding-left: 22px; color: var(--muted); }
+  li { margin-bottom: 6px; }
+  dt { font-weight: 600; margin-top: 22px; }
+  dd { margin: 4px 0 0; color: var(--muted); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; margin: 28px 0 0; }
+  .icon { width: 96px; height: 96px; border-radius: 22px; display: block; margin-bottom: 24px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="icon-256.png" alt="">
+  <h1>Tally</h1>
+  <p class="lede">Sales, downloads, analytics and reviews for all your apps, at a glance. For App Store Connect, on iPhone, iPad and Mac.</p>
+
+  <div class="card">
+    <p><strong>Need help?</strong> Email <a href="mailto:csergay@gmail.com">csergay@gmail.com</a>. Please include which device you're using and what you see on screen. Never send your .p8 key.</p>
+  </div>
+
+  <h2>Connecting App Store Connect</h2>
+  <ol>
+    <li>In App Store Connect, open <strong>Users and Access › Integrations › App Store Connect API</strong> and choose <strong>Team Keys</strong>. Individual keys can't read sales.</li>
+    <li>Generate a key with the <strong>Sales</strong> role (shown as "Sales and Reports"). It's the least access Tally needs. Only the Account Holder or an Admin can create team keys.</li>
+    <li>Download the .p8 file (Apple only lets you download it once). On iPhone, AirDrop it and choose Tally, or find it in Files › Downloads.</li>
+    <li>In Tally, paste or choose the key, the Issuer ID (shown above the list of keys) and your vendor number (top left of Payments and Financial Reports).</li>
+  </ol>
+
+  <h2>Questions</h2>
+  <dl>
+    <dt>When do yesterday's numbers arrive?</dt>
+    <dd>Apple publishes daily sales reports the next morning, usually by 5 a.m. Pacific Time. Until then Tally shows the latest day available and says which day it's waiting for. Days follow Pacific Time, as in Apple's reports.</dd>
+    <dt>Why does a day show no sales?</dt>
+    <dd>Apple only publishes a daily report when at least one unit was sold or downloaded. Tally waits until the report should exist before calling a day "no sales", and keeps checking for a few days in case Apple is late.</dd>
+    <dt>How are currencies converted?</dt>
+    <dd>Apple pays proceeds in many currencies. Tally converts them with the European Central Bank's daily reference rates, so totals are estimates. Currencies the ECB doesn't publish are shown separately rather than guessed.</dd>
+    <dt>Why are analytics empty?</dt>
+    <dd>Apple only prepares App Store analytics after they're turned on for each app, which needs an Admin key once. Reports then take 1–2 days to appear and arrive daily after that, a day or two behind sales.</dd>
+    <dt>"This key can't read sales"</dt>
+    <dd>The key needs the Sales role (or higher) and must be a team key. Check it in Users and Access › Integrations, or create a new one.</dd>
+    <dt>"Apple returned a server error for this vendor number"</dt>
+    <dd>Apple answers a vendor number that isn't yours with a server error. Check the number in Payments and Financial Reports, top left.</dd>
+    <dt>Subscriptions</dt>
+    <dd>Tally Free shows one app. Tally Pro adds all apps and accounts, widgets, the Mac app and menu bar, analytics, reviews and alerts, and CSV export. Manage or cancel in Settings › your name › Subscriptions. Restore a purchase in Tally › Settings › Restore Purchases.</dd>
+  </dl>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a> · © 2026 Colin Sergay
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tally — Privacy Policy</title>
+<meta name="description" content="Tally has no servers and collects no data. Your App Store Connect key and reports stay on your devices.">
+<link rel="icon" href="icon-256.png">
+<style>
+  :root {
+    --ground: #f4f6f9; --surface: #ffffff; --ink: #141a22;
+    --muted: #5b6573; --line: #dde3ea; --accent: #0072b2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0d1117; --surface: #151b23; --ink: #eef2f6;
+      --muted: #9aa5b3; --line: #252d38; --accent: #56b4e9;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink);
+    font: 16px/1.65 ui-sans-serif, -apple-system, system-ui, "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 72px 24px 96px; }
+  h1 { font-size: 2.2rem; letter-spacing: -.02em; margin: 0 0 6px; }
+  h2 { font-size: 1.15rem; margin: 40px 0 8px; }
+  p { margin: 0 0 14px; }
+  p.lede { color: var(--muted); font-size: 1.05rem; margin-bottom: 36px; }
+  a { color: var(--accent); }
+  ul { margin: 0 0 14px; padding-left: 20px; color: var(--muted); }
+  li { margin-bottom: 6px; }
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="lede">Last updated 23 September 2026</p>
+
+  <p><strong>Tally does not collect any data about you.</strong> It has no server of its own and no account. It talks directly to Apple from your devices.</p>
+
+  <h2>What Tally stores</h2>
+  <p><strong>Your App Store Connect API key</strong> (the .p8 private key, its Key ID and your Issuer ID) is stored in the Keychain on your device. It stays on that device unless you turn on "Sync key with iCloud Keychain", in which case iCloud Keychain syncs it, end-to-end encrypted, to your other devices signed in to the same Apple Account. Your vendor number and an optional account name are stored with Tally's other data.</p>
+  <p><strong>Your reports</strong> are downloaded from Apple and stored on your device, in a local database that Tally's widgets can also read. They include daily sales reports (units, proceeds, prices, countries and product identifiers), App Store analytics (impressions, product page views, downloads by source, sessions and crashes) and your apps' customer reviews. Reviews are written by your customers and include the nickname they chose, their review text and their App Store country; Tally only shows them to you.</p>
+  <p><strong>Exchange rates</strong> published by the European Central Bank are stored so proceeds can be shown in one currency.</p>
+  <p>A few settings sit alongside, in the app's preferences on the device: your display currency, chosen period, which notifications you turned on, whether the menu bar item is shown, which app Tally Free shows, and whether this device has Tally Pro.</p>
+  <p>If you add a Tally widget, Tally keeps a small summary of the numbers it shows (such as the latest day's proceeds and downloads and your top apps) in a shared container on your device, so the widget can read it. On a Mac, the latest day's proceeds can appear in the menu bar.</p>
+  <p>If you turn on notifications, Tally creates them on your device when a new report or review arrives. They include figures such as proceeds and downloads, or the review's rating and text, and like any notification they can appear on your Lock Screen.</p>
+
+  <h2>Who Tally talks to</h2>
+  <ul>
+    <li><strong>Apple</strong>, using your API key: the App Store Connect API (<code>api.appstoreconnect.apple.com</code>) for your apps, sales reports, analytics and reviews, and the download links Apple provides for analytics report files. Your key is only ever sent to Apple's API, never to the file download links.</li>
+    <li><strong>The European Central Bank</strong> (<code>www.ecb.europa.eu</code>), to download its public daily exchange rates. This request contains nothing about you or your apps.</li>
+  </ul>
+  <p>If you choose "Turn on App Store analytics", Tally asks Apple, in your App Store Connect account, to start preparing analytics reports for your apps. If Apple needs an Admin key for that step, Tally uses the key you provide once and does not save it.</p>
+  <p>Nothing else. Tally has no analytics or crash reporting of its own, and no other network requests.</p>
+
+  <h2>Purchases</h2>
+  <p>Tally Pro is an optional subscription handled entirely by the App Store. Tally never sees your name, your Apple Account, your payment details or your purchase history. It asks the App Store whether this device is entitled to Pro, and the App Store answers on the device.</p>
+
+  <h2>What Tally does not do</h2>
+  <ul>
+    <li>No account, sign-in or email address.</li>
+    <li>No analytics, crash reporting or usage measurement.</li>
+    <li>No advertising, and no advertising identifiers.</li>
+    <li>No tracking, and no data shared with any third party for any purpose.</li>
+  </ul>
+
+  <h2>Exports</h2>
+  <p>CSV exports are created on your device and handed to the share sheet. Where they go from there is up to you, and Tally never sees it.</p>
+
+  <h2>Backups</h2>
+  <p>If you back up your device to iCloud or a computer, Tally's stored reports are included in that backup, under Apple's terms and encryption rather than ours. Keychain items follow the Keychain's own backup rules.</p>
+
+  <h2>Deleting your data</h2>
+  <p>Settings › Accounts › Remove deletes the key from the Keychain (including iCloud Keychain, if synced) and every report Tally downloaded for that account. Deleting the app removes everything else Tally stored. Your App Store Connect key itself stays active until you revoke it in App Store Connect.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, for example if an optional service with its own server is added, the updated version will be posted at this address with a new date at the top before that change reaches the app.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: <a href="mailto:csergay@gmail.com">csergay@gmail.com</a></p>
+
+  <footer>
+    <a href="index.html">Support</a> · © 2026 Colin Sergay
+  </footer>
+</main>
+</body>
+</html>
