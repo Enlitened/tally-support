@@ -37,21 +37,24 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="lede">Last updated 23 September 2026</p>
+  <p class="lede">Last updated 24 September 2026</p>
 
   <p><strong>Tally does not collect any data about you.</strong> It has no server of its own and no account. It talks directly to Apple from your devices.</p>
 
   <h2>What Tally stores</h2>
-  <p><strong>Your App Store Connect API key</strong> (the .p8 private key, its Key ID and your Issuer ID) is stored in the Keychain on your device. It stays on that device unless you turn on "Sync key with iCloud Keychain", in which case iCloud Keychain syncs it, end-to-end encrypted, to your other devices signed in to the same Apple Account. Your vendor number and an optional account name are stored with Tally's other data.</p>
+  <p><strong>Your App Store Connect API key</strong> (the .p8 private key, its Key ID and your Issuer ID) is stored in the Keychain on your device. It stays on that device unless you turn on "Sync key with iCloud Keychain", in which case iCloud Keychain syncs it, end-to-end encrypted, to your other devices signed in to the same Apple Account. Your vendor number and an optional account name are stored with Tally's other data and synced through iCloud (see below).</p>
   <p><strong>Your reports</strong> are downloaded from Apple and stored on your device, in a local database that Tally's widgets can also read. They include daily sales reports (units, proceeds, prices, countries and product identifiers), App Store analytics (impressions, product page views, downloads by source, sessions and crashes) and your apps' customer reviews. Reviews are written by your customers and include the nickname they chose, their review text and their App Store country; Tally only shows them to you.</p>
   <p><strong>Exchange rates</strong> published by the European Central Bank are stored so proceeds can be shown in one currency.</p>
   <p>A few settings sit alongside, in the app's preferences on the device: your display currency, chosen period, which notifications you turned on, whether the menu bar item is shown, which app Tally Free shows, and whether this device has Tally Pro.</p>
+  <h2>iCloud sync</h2>
+  <p>So your iPhone, iPad and Mac show the same setup, Tally syncs a small amount of data through your own private iCloud database, using Apple's CloudKit: each account's name, vendor number, Key ID and Issuer ID; your release notes; your display currency; and which app Tally Free shows. This data is stored in your iCloud account under Apple's terms, and Tally (its developer included) cannot read it. <strong>Your .p8 private key is never stored in CloudKit</strong>, and your reports aren't synced: each device downloads them from Apple itself. If you're not signed in to iCloud, nothing is synced.</p>
   <p>If you add a Tally widget, Tally keeps a small summary of the numbers it shows (such as the latest day's proceeds and downloads and your top apps) in a shared container on your device, so the widget can read it. On a Mac, the latest day's proceeds can appear in the menu bar.</p>
   <p>If you turn on notifications, Tally creates them on your device when a new report or review arrives. They include figures such as proceeds and downloads, or the review's rating and text, and like any notification they can appear on your Lock Screen.</p>
 
   <h2>Who Tally talks to</h2>
   <ul>
     <li><strong>Apple</strong>, using your API key: the App Store Connect API (<code>api.appstoreconnect.apple.com</code>) for your apps, sales reports, analytics and reviews, and the download links Apple provides for analytics report files. Your key is only ever sent to Apple's API, never to the file download links.</li>
+    <li><strong>Apple's iCloud</strong> (CloudKit, your private database), for the synced items listed above.</li>
     <li><strong>The European Central Bank</strong> (<code>www.ecb.europa.eu</code>), to download its public daily exchange rates. This request contains nothing about you or your apps.</li>
   </ul>
   <p>If you choose "Turn on App Store analytics", Tally asks Apple, in your App Store Connect account, to start preparing analytics reports for your apps. If Apple needs an Admin key for that step, Tally uses the key you provide once and does not save it.</p>
@@ -75,7 +78,7 @@
   <p>If you back up your device to iCloud or a computer, Tally's stored reports are included in that backup, under Apple's terms and encryption rather than ours. Keychain items follow the Keychain's own backup rules.</p>
 
   <h2>Deleting your data</h2>
-  <p>Settings › Accounts › Remove deletes the key from the Keychain (including iCloud Keychain, if synced) and every report Tally downloaded for that account. Deleting the app removes everything else Tally stored. Your App Store Connect key itself stays active until you revoke it in App Store Connect.</p>
+  <p>Settings › Accounts › Remove deletes the key from the Keychain (including iCloud Keychain, if synced) and every report Tally downloaded for that account, on every device that syncs with iCloud. Deleting the app removes everything else Tally stored on that device. To delete Tally's iCloud data, use Settings › [your name] › iCloud › Manage Account Storage on iPhone, or System Settings › [your name] › iCloud on a Mac. Your App Store Connect key itself stays active until you revoke it in App Store Connect.</p>
 
   <h2>Changes to this policy</h2>
   <p>If this policy changes, for example if an optional service with its own server is added, the updated version will be posted at this address with a new date at the top before that change reaches the app.</p>
