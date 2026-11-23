@@ -3,17 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tally: App Store Connect sales, subscriptions and reviews on iPhone, iPad and Mac</title>
-<meta name="description" content="Tally shows your App Store Connect proceeds, downloads, subscriptions, analytics and reviews for every app, on iPhone, iPad and Mac. No server, no account. Free to try with sample data.">
+<title>Tally: app sales and revenue for App Store Connect</title>
+<meta name="description" content="See your app sales, revenue, downloads, subscriptions, analytics and reviews from App Store Connect on iPhone, iPad and Mac. No server, no account.">
 <link rel="canonical" href="https://enlitened.github.io/tally-support/">
 <meta name="google-site-verification" content="SEoceQq78j0Gy8g8P2wMha72T9RkY5-7OUBrDHiyP6U" />
 <meta name="apple-itunes-app" content="app-id=6815053837">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tally: App Store Connect sales, subscriptions and reviews">
-<meta property="og:description" content="Your proceeds, downloads, subscriptions, analytics and reviews for every app, on iPhone, iPad and Mac. No server, no account.">
+<meta property="og:title" content="Tally: app sales and revenue for App Store Connect">
+<meta property="og:description" content="See your app sales, revenue, downloads, subscriptions, analytics and reviews from App Store Connect on iPhone, iPad and Mac. No server, no account.">
 <meta property="og:url" content="https://enlitened.github.io/tally-support/">
 <meta property="og:image" content="https://enlitened.github.io/tally-support/icon-256.png">
 <link rel="icon" href="icon-256.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Tally",
+  "description": "Sales, downloads, subscriptions, analytics and reviews from App Store Connect for all your apps, on iPhone, iPad and Mac.",
+  "url": "https://enlitened.github.io/tally-support/",
+  "image": "https://enlitened.github.io/tally-support/icon-256.png",
+  "installUrl": "https://apps.apple.com/app/id6815053837",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "iOS 26, iPadOS 26, macOS 26",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "Colin Sergay" }
+}
+</script>
 <style>
   :root {
     --ground: #f4f6f9; --surface: #ffffff; --ink: #141a22;
@@ -52,7 +67,7 @@
   <img class="icon" src="icon-256.png" alt="">
   <h1>Tally</h1>
   <p class="lede">Sales, downloads, analytics and reviews for all your apps, at a glance. For App Store Connect, on iPhone, iPad and Mac.</p>
-  <p><a class="get" href="https://apps.apple.com/app/id6815053837">Get Tally on the App Store</a></p>
+  <p><a class="get" href="https://apps.apple.com/app/id6815053837?pt=129383521&amp;ct=web_home">Get Tally on the App Store</a></p>
   <p class="lede">Free for one app. Tally reads your reports straight from Apple with your own API key and keeps them on your devices: no server, no account. You can explore every screen with sample data before connecting anything.</p>
 
   <div class="card">
@@ -76,7 +91,7 @@
     <dt>How are currencies converted?</dt>
     <dd>Apple pays proceeds in many currencies. Tally converts them with the European Central Bank's daily reference rates, so totals are estimates. Currencies the ECB doesn't publish are shown separately rather than guessed.</dd>
     <dt>Why are analytics empty?</dt>
-    <dd>Apple only prepares App Store analytics after they're turned on for each app, which needs an Admin key once. Reports then take 1–2 days to appear and arrive daily after that, a day or two behind sales.</dd>
+    <dd>Apple only prepares App Store analytics after they're turned on for each app, which needs an Admin key once. Reports then take 1 to 2 days to appear and arrive daily after that, a day or two behind sales.</dd>
     <dt>"This key can't read sales"</dt>
     <dd>The key needs the Sales role (or higher) and must be a team key. Check it in Users and Access › Integrations, or create a new one.</dd>
     <dt>"Apple returned a server error for this vendor number"</dt>
